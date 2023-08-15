@@ -2,6 +2,7 @@
 <section name="Workbench">
 	<section name="MavenProjectWizardLocationPage">
 		<list key="location">
+			<item value="D:\Lishwar&apos;s Repo Sanctuary\Hibernate\Hibernate_Practice"/>
 		</list>
 		<list key="projectNameTemplate">
 			<item value="[artifactId]"/>
@@ -25,12 +26,14 @@
 	</section>
 	<section name="Maven2ProjectWizardArchifactPage">
 		<list key="package">
+			<item value="hiberante.Hibernate_Practice_2"/>
 			<item value="hiberante.practice"/>
 		</list>
 		<list key="groupId">
 			<item value="hiberante"/>
 		</list>
 		<list key="artifactId">
+			<item value="Hibernate_Practice_2"/>
 			<item value="practice"/>
 		</list>
 		<list key="projectNameTemplate">
