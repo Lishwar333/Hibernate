@@ -1,0 +1,9 @@
+package hiberante.practice;
+
+public class Microcontroller {
+	
+	String name;
+	int archetecture;
+	int pins;
+
+}

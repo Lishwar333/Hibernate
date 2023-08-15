@@ -1,0 +1,47 @@
+package hiberante.practice;
+
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+@Entity
+public class Employee {
+	
+	@Id
+	int Eid;
+	String name;
+	int exp;
+	//Skill skill;
+	
+	public int getEid() {
+		return Eid;
+	}
+	public void setEid(int eid) {
+		Eid = eid;
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	
+	@Override
+	public String toString() {
+		return "Employee [Eid=" + Eid + ", name=" + name + ", exp=" + exp + "]";
+	}
+	public int getExp() {
+		return exp;
+	}
+	public void setExp(int exp) {
+		this.exp = exp;
+	}
+//	public Skill getSkill() {
+//		return skill;
+//	}
+//	public void setSkill(Skill skill) {
+//		this.skill = skill;
+//	}
+	
+	
+
+}

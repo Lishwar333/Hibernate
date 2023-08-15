@@ -1,0 +1,42 @@
+package hiberante.practice;
+
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.ManyToOne;
+
+@Entity
+public class Skill {
+
+	@Id
+	int Sid;
+	String Skill_name;
+	int Skill_exp;
+	
+	@ManyToOne
+	Employee emp;
+	
+	public int getSid() {
+		return Sid;
+	}
+	public void setSid(int sid) {
+		Sid = sid;
+	}
+	public String getSkill_name() {
+		return Skill_name;
+	}
+	public void setSkill_name(String skill_name) {
+		Skill_name = skill_name;
+	}
+	public int getSkill_exp() {
+		return Skill_exp;
+	}
+	public void setSkill_exp(int skill_exp) {
+		Skill_exp = skill_exp;
+	}
+	
+	@Override
+	public String toString() {
+		return "Skill [Sid=" + Sid + ", Skill_name=" + Skill_name + ", Skill_exp=" + Skill_exp + "]";
+	}
+	
+}

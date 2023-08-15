@@ -1,0 +1,36 @@
+package hiberante.practice;
+
+import javax.persistence.Embeddable;
+
+@Embeddable
+public class Microcontroller {
+
+	String name;
+	int archetecture;
+	int pins;
+	
+	@Override
+	public String toString() {
+		return "Microcontroller [name=" + name + ", archetecture=" + archetecture + ", pins=" + pins + "]";
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public int getArchetecture() {
+		return archetecture;
+	}
+	public void setArchetecture(int archetecture) {
+		this.archetecture = archetecture;
+	}
+	public int getPins() {
+		return pins;
+	}
+	public void setPins(int pins) {
+		this.pins = pins;
+	}
+	
+
+}

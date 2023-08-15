@@ -1,0 +1,29 @@
+package hiberante.practice;
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
+import org.hibernate.cfg.Configuration;
+
+public class App 
+{
+    public static void main( String[] args )
+    {
+    	
+    	Robot robot = new Robot();
+    	robot.setId(23);
+    	robot.setName("Asimo");
+    	robot.setCost(25000);
+    	
+    	Configuration con = new Configuration().configure().addAnnotatedClass(Robot.class);
+    	SessionFactory sf = con.buildSessionFactory();
+    	
+    	Session session = sf.openSession();
+    	
+    	Transaction tx = session.beginTransaction();
+    	
+    	session.save(robot);
+    	
+    	tx.commit();
+        
+    }
+}
