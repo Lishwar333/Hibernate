@@ -1,0 +1,64 @@
+package hiberante.practice;
+
+import java.util.ArrayList;
+
+import java.util.List;
+
+import javax.persistence.Cacheable;
+import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.Id;
+import javax.persistence.OneToMany;
+import org.hibernate.annotations.Cache;
+import org.hibernate.annotations.CacheConcurrencyStrategy;
+
+@Entity
+@Cacheable
+@Cache(usage = CacheConcurrencyStrategy.READ_ONLY)
+public class Employee {
+	
+	
+	@Id
+	int Eid;
+	String name;
+	int exp;
+	
+	@OneToMany(mappedBy = "emp", fetch = FetchType.EAGER)
+	List<Skill> skills = new ArrayList<>();
+	
+	@Override
+	public String toString() {
+		return "Employee [Eid=" + Eid + ", name=" + name + ", exp=" + exp + ", skills=" + skills + "]";
+	}
+	
+	public List<Skill> getSkills() {
+		return skills;
+	}
+	
+	public void setSkills(List<Skill> skills) {
+		this.skills = skills;
+	}
+
+	public int getEid() {
+		return Eid;
+	}
+	public void setEid(int eid) {
+		Eid = eid;
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	
+	public int getExp() {
+		return exp;
+	}
+	public void setExp(int exp) {
+		this.exp = exp;
+	}
+
+	
+
+}
