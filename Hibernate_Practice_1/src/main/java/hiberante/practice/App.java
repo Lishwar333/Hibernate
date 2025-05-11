@@ -57,16 +57,17 @@ public class App
     	
     // Implementation 2 done
     	
-    	Configuration con = new Configuration().configure().addAnnotatedClass(Employee.class).addAnnotatedClass(Skill.class);
+    	Configuration con = new Configuration().configure().addAnnotatedClass(Employee.class).addAnnotatedClass(Robot.class).addAnnotatedClass(Skill.class);
     	ServiceRegistry reg =new ServiceRegistryBuilder().applySettings(con.getProperties()).buildServiceRegistry();
     	SessionFactory sf = con.buildSessionFactory(reg);
     	Session session = sf.openSession();
     	Transaction tx = session.beginTransaction();
     	//session.save(robot);
     	session.save(e1);
-//    	session.save(s1);
-//    	session.save(s2);
-//    	Robot r = (Robot)session.get(Robot.class, 21);
+    	session.save(s1);
+    	session.save(s2);
+    	session.save(robot);
+    	Robot r = (Robot)session.get(Robot.class, 21);
     	
     	tx.commit();
         
