@@ -114,7 +114,7 @@ public class App
     	Session session5 = sf.openSession(); 
     	Transaction tx5 = session5.beginTransaction();
     	
-    	SQLQuery q5 = session5.createSQLQuery("select Sid, Skill_name from Skill where Skill_name = 'Python'");
+    	SQLQuery q5 = session5.createSQLQuery("select Sid, Skill_name from Skill where Skill_name = 'Core Java'");
     	//for regular row(s), use q5.addEntity(Employee.class)
     	
     	q5.setResultTransformer(Criteria.ALIAS_TO_ENTITY_MAP);
